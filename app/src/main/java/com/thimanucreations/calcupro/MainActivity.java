@@ -2,6 +2,7 @@ package com.thimanucreations.calcupro;
 
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText display;
     Button clearButton;
+    private MediaPlayer One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Zero, Plus, Minus, Multi, Divide, Point, Clear, Cut, Bracket, Equal;
     int i;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -52,51 +54,191 @@ public class MainActivity extends AppCompatActivity {
     public void zero(View view) {
         updateText("0");
 
+       Zero = MediaPlayer.create(this, R.raw.zero);
+
+        Zero.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Zero.start();
+            }
+        });
+        Zero.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Zero.release();
+            }
+        });  
     }
 
     public void one(View view) {
         updateText("1");
-    
+        One = MediaPlayer.create(this, R.raw.one);
+
+        One.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                One.start();
+            }
+        });
+        One.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                One.release();
+            }
+        });  
     }
 
     public void two(View view) {
         updateText("2");
 
+        Two = MediaPlayer.create(this, R.raw.two);
+
+        Two.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Two.start();
+            }
+        });
+        Two.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Two.release();
+            }
+        });  
     }
 
     public void three(View view) {
         updateText("3");
+
+        Three = MediaPlayer.create(this, R.raw.three);
+
+        Three.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Three.start();
+            }
+        });
+        Three.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Three.release();
+            }
+        }); 
 
     }
 
     public void four(View view) {
         updateText("4");
 
+        Four = MediaPlayer.create(this, R.raw.four);
+
+        Four.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Four.start();
+            }
+        });
+        Four.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Four.release();
+            }
+        });  
     }
 
     public void five(View view) {
         updateText("5");
 
+        Five = MediaPlayer.create(this, R.raw.five);
+
+        Five.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Five.start();
+            }
+        });
+        Five.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Five.release();
+            }
+        });  
     }
 
     public void six(View view) {
         updateText("6");
 
+        Six = MediaPlayer.create(this, R.raw.six);
+
+        Six.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Six.start();
+            }
+        });
+        Six.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Six.release();
+            }
+        });  
     }
 
     public void seven(View view) {
         updateText("7");
 
+        Seven = MediaPlayer.create(this, R.raw.seven);
+
+        Seven.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Seven.start();
+            }
+        });
+        Seven.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Seven.release();
+            }
+        }); 
     }
 
     public void eight(View view) {
         updateText("8");
 
+        Eight = MediaPlayer.create(this, R.raw.eight);
+
+        Eight.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Eight.start();
+            }
+        });
+        Eight.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Eight.release();
+            }
+        }); 
     }
 
     public void nine(View view) {
         updateText("9");
 
+        Nine = MediaPlayer.create(this, R.raw.nine);
+
+        Nine.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Nine.start();
+            }
+        });
+        Nine.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Nine.release();
+            }
+        }); 
     }
         String plusTwo;
 
@@ -126,22 +268,80 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+
+        Plus = MediaPlayer.create(this, R.raw.plus);
+
+        Plus.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Plus.start();
+            }
+        });
+        Plus.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Plus.release();
+            }
+        }); 
     }
 
 
     public void subtract(View view) {
         updateText("-");
 
+        Minus = MediaPlayer.create(this, R.raw.minus);
+
+        Minus.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Minus.start();
+            }
+        });
+        Minus.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Minus.release();
+            }
+        }); 
+
     }
 
     public void multify(View view) {
         updateText("×");
 
+        Multi = MediaPlayer.create(this, R.raw.multi);
+
+        Multi.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Multi.start();
+            }
+        });
+        Multi.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Multi.release();
+            }
+        }); 
     }
 
     public void divide(View view) {
         updateText("÷");
 
+        Divide = MediaPlayer.create(this, R.raw.divide);
+
+        Divide.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Divide.start();
+            }
+        });
+        Divide.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Divide.release();
+            }
+        }); 
     }
 
     public void percent(View view) {
@@ -182,6 +382,20 @@ public class MainActivity extends AppCompatActivity {
         }
         display.setSelection(cursorPos + 1);
 
+        Bracket = MediaPlayer.create(this, R.raw.bracket);
+
+        Bracket.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Bracket.start();
+            }
+        });
+        Bracket.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Bracket.release();
+            }
+        }); 
     }
 
     public void clear(View view) {
@@ -193,7 +407,20 @@ public class MainActivity extends AppCompatActivity {
             display.setEnabled(true);
         }
         display.setTextSize(64);
+        Clear = MediaPlayer.create(this, R.raw.clear);
 
+        Clear.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Clear.start();
+            }
+        });
+        Clear.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Clear.release();
+            }
+        }); 
     }
 
     public void backspace(View view) {
@@ -207,15 +434,60 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        Cut = MediaPlayer.create(this, R.raw.cut);
+
+        Cut.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Cut.start();
+            }
+        });
+        Cut.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Cut.release();
+            }
+        }); 
+
     }
 
     public void point(View view) {
         updateText(".");
 
+        Point = MediaPlayer.create(this, R.raw.point);
+
+        Point.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Point.start();
+            }
+        });
+        Point.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Point.release();
+            }
+        }); 
+
     }
 
     public void plusmins(View view) {
         updateText("-");
+
+        Minus = MediaPlayer.create(this, R.raw.minus);
+
+        Minus.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Minus.start();
+            }
+        });
+        Minus.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Minus.release();
+            }
+        }); 
 
     }
 
@@ -277,6 +549,21 @@ public class MainActivity extends AppCompatActivity {
         }
         display.setSelection(result.length());
 
+
+        Equal = MediaPlayer.create(this, R.raw.eqal);
+
+        Equal.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Equal.start();
+            }
+        });
+        Equal.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Equal.release();
+            }
+        });  
 
         if(display.getText().toString().equals("NaN")) {
             display.setText("Error");
