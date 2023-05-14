@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         clearButton =findViewById(R.id.clear);
 
 
+        display.setShowSoftInputOnFocus(false);
+
+
     }
 
     private void updateText(String strToAdd){
